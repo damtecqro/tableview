@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hgp-c3-ARK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hgp-c3-ARK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="162" id="dhc-hl-hdL" customClass="PCTableViewCell" customModule="carrito" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productoCell" rowHeight="162" id="dhc-hl-hdL" customClass="PCTableViewCell" customModule="carrito" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dhc-hl-hdL" id="azX-rM-F8t">
@@ -124,6 +124,9 @@
                                                     <constraint firstAttribute="width" secondItem="CpI-7N-T5h" secondAttribute="height" multiplier="1:1" id="R2y-DE-0rt"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="camera.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="takePhoto:" destination="1bj-wE-omT" eventType="touchUpInside" id="Z8C-fx-XUr"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhw-Us-Erg">
                                                 <rect key="frame" x="16" y="192" width="382" height="50"/>
@@ -200,6 +203,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="goA-G2-hVc"/>
                     <connections>
+                        <outlet property="btnImage" destination="CpI-7N-T5h" id="BGu-kD-d0v"/>
                         <outlet property="nombreText" destination="hhw-Us-Erg" id="Lvs-6s-Mil"/>
                         <outlet property="precioText" destination="y7O-8R-kEI" id="6Hk-wp-e3E"/>
                     </connections>
@@ -238,7 +242,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="cart.fill" catalog="system" width="64" height="50"/>
+        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
     </resources>
 </document>
